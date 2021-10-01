@@ -7,5 +7,5 @@
 
   * Use Wireshark to analyze and find malicious activity on the network traffic.
 ### Read through the [Offensive](https://github.com/fpanes/FinalProject/blob/main/Offensive.md), [Defensive](https://github.com/fpanes/FinalProject/blob/main/Defensive.md), and [Network Analysis](https://github.com/fpanes/FinalProject/blob/main/Network.md) files to see the work, process and findings that leads up to the final presentation.
-#### View the Google slide defensive project presentation here.
+#### View the Google slide defensive project presentation [here](https://docs.google.com/presentation/d/1vs7FdZhMwk7gnJwQfN80L3Gzk6EEYVUzGoGSRkDlJHI/edit?usp=sharing).
 Note: The presentation was created as a group with classmates. We chose to cover the defensive side to cover: network topology, vulnerabilities/weaknesses, analyze alarms and thresholds in Elastic watcher (Kibana), and implement hardening methods. However, all other documentation for offensive, defensive and network analysis was my own personal work. We were only assigned to be a team to bring our findings together on the final day of our Cybersecurity Bootcamp.
