@@ -41,13 +41,13 @@ The following machines were identified on the network:
 
 The target of this attack was: `Target 1` (192.168.1.110).
 
-Two VMs on the network were vulnerable to attack due to weak security implementation services and administration: Target 1 (192.168.1.110) and Target 2 (192.168.1.115). However, only Target 1 is covered and was attacked.
+Due to inadequate security installation services and administration, two VMs on the network were exposed to attack: Target 1 (192.168.1.110) and Target 2. (192.168.1.115). However, only Target 1 has been covered and attacked.
 
-Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
+Because Target 1 is an Apache web server with SSH enabled, attackers may get access via ports 80 and 22. As a result, the following alerts have been issued:
 
 ### Monitoring the Targets
 
-Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
+The volume of traffic to these services should be closely monitored. To that purpose, we have implemented the following alerts:
 
 #### Excessive HTTP Errors
 Excessive HTTP Errors is implemented as follows:
