@@ -64,7 +64,7 @@ Excessive HTTP Errors is implemented as follows:
 HTTP Request Size Monitor is implemented as follows:
   - **Metric**: WHEN sum() of http.request.bytes OVER all documents
   - **Threshold**: IS ABOVE 3500
-  - **Vulnerability Mitigated**: Measurement of high traffic events; which could be an indicator of attack.
+  - **Vulnerability Mitigated**: Measurement of high-traffic occurrences, which may be a warning of an impending attack.
   - **Reliability**: This was highly reliable when John the Ripper was executed.
   
 
@@ -80,35 +80,35 @@ CPU Usage Monitor is implemented as follows:
 
 ### Suggestions for Going Further
 
-- Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it. For each vulnerability/exploit identified by the alerts above, suggest a patch. E.g., implementing a blocklist is an effective tactic against brute-force attacks.
+- Each of the alerts listed above is for a distinct vulnerability/exploit. Recall that notifications merely identify harmful conduct and do not prevent it. Suggest a fix for each vulnerability/exploit reported in the warnings above. Implementing a blocklist, for example, is an effective defense against brute-force attacks.
 
-The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
+The logs and warnings created during the evaluation indicate that this network is vulnerable to multiple active threats, as shown by the aforementioned alerts. In addition to monitoring for such attacks, the network should be hardened against them. To secure the network, the Blue Team recommends that IT execute the following fixes:
 - Vulnerability 1: Weak and Easily Brute-Forced Passwords / SSH Login
   - Mitigation Techniques:
     - Set a custom SSH port
-    - **Why It Works**: By default, SSH is set to be listening on port 22. Almost all cyber attackers know that. Changing the default port 22, for example 846 offers an additional layer of security by obscurity.
+    - **Why It Works**: SSH is configured to listen on port 22 by default. Almost all cyber attackers are aware of this. Changing the default port 22, for example, to 846, adds an extra degree of protection through obscurity.
     - Implement SSH Private/Public Keys to login via SSH and disable passwords.
-    - **Why It Works**: Each key is a large number with different mathematical properties. The Private Key is stored on the computer you login from, while the public key is stored on the .ssh/authorized_keys file on each computer you want to login to.
+    - **Why It Works**: Each key consists of a huge integer with distinct mathematical features. The private key is kept on the computer from which you login, while the public key is kept in the.ssh/authorized keys file on each machine to which you want to login.
     - Allow Only Specific Clients (Connections)
-    - **Why It Works**: implementing the following command: "iptables -A INPUT -p tcp -s YourIP --dport 22 -j ACCEPT". By creating a specific filter/rule in your firewall, you are opening SSH port only to your IP address.
+    - **Why It Works**: executing the command "iptables -A INPUT -p tcp -s YourIP —dport 22 -j ACCEPT" You open the SSH port just to your IP address by defining a particular filter/rule in your firewall.
 - Vulnerability 2: WordPress User Enumeration
   - Mitigation Techniques: 
     - "Texas" 2-Step: Disable Scans and Block User Enumeration via .htcaccess
     - **Why It Works**: This 2 step process will add layers of security by:
     - Adding a code snippet to your theme's functions.php file:
 
-    - Adding a code snippet to your site's root .htcaccess file (the file will need to be created if you don't originally have it setup)
+    - Adding a code snippet to your site's root.htcaccess file (the file must be created if it does not already exist)
   
 - Vulnerability 3: Weak wp-config.php security implementation
   - Mitigation Techniques:
-  - Setting up proper file security permissions within user files & Protect the wp-config.php file with .htcaccess file
-  - **Why It Works**: Setting up the proper file security permissions could have mitigated reading the file when we performed the cat/nano command. This left the wp-config.php that listed a password in plaintext.
+  - Adding adequate file security permissions to user files and protecting the wp-config.php file with a.htcaccess file
+  - **Why It Works**: Setting up adequate file security permissions may have prevented us from reading the file when we ran the cat/nano command. This left the wp-config.php file with a password listed in plaintext.
 
   - Modify wp-config.php
-  - **Why It Works**: By creating a new config file outside of WWW access directory it is protected from foreing access or external attackers.
+  - **Why It Works**: It is safeguarded against accidental access or external attackers by generating a new config file outside of the WWW access directory.
   - Setup the correct file permissions for WP-Config.php to 400
-  - **Why it Works**: By performing chmod 400 on the file; user and groups have permission to only read and others will not be able to access the file.
+  - **Why it Works**: By running chmod 400 on the file, users and groups will only be able to read it, while others will be unable to access it.
 - Vulnerability 4: Python Privilege Escalation
   - Mitigation Techniques: 
     - Remove sudo access for python for the user.
-    - **Why It Works**: If this access is taken away, this method of privilege escalation is no longer susceptible to being vulnerable.
+    - **Why It Works**: When this access is removed, this technique of privilege escalation is no longer vulnerable.
