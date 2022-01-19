@@ -55,7 +55,7 @@ Excessive HTTP Errors is implemented as follows:
     WHEN count() GROUPED OVER top 5 ‘http.response.status_code’
   - **Threshold**: IS ABOVE 400
   - **Vulnerability Mitigated**: Enumeration
-  - **Reliability**: The alert is quite dependable. Any normal or successful responses will be filtered out when measuring by error codes 400 and above. The 400+ codes are client and server problems, which are more serious. Especially when these error codes are being generated at such a high rate. It discovered our wpscan.
+  - **Reliability**: The alert is really reliable. When measuring by error codes 400 and higher, any normal or successful replies will be taken out. The 400+ codes indicate more significant client and server issues. Especially when these error codes are being created at such a rapid pace. It came through our wpscan.
 
 
 
