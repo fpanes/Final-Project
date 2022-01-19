@@ -101,7 +101,7 @@ The logs and alerts generated during the assessment suggest that this network is
   
 - Vulnerability 3: Weak wp-config.php security implementation
   - Mitigation Techniques:
-  - Setting up proper file security permissions within user files [4] & Protect the wp-config.php file with .htcaccess file
+  - Setting up proper file security permissions within user files & Protect the wp-config.php file with .htcaccess file
   - **Why It Works**: Setting up the proper file security permissions could have mitigated reading the file when we performed the cat/nano command. This left the wp-config.php that listed a password in plaintext.
 
   - Modify wp-config.php
