@@ -1,7 +1,7 @@
 # Final Project
 ## Attack, Defense &amp; Analysis of a Vulnerable Network
 ### The objective was to put into reality a variety of principles covered throughout the cybersecurity course, as well as to function as a pentester and SOC analyst.
-  * Find vulnerabilities, weaknesses, and exploits to gain access to a vulnerable WordPress server.
+  * To obtain access to a susceptible WordPress server, look for vulnerabilities, flaws, and exploits.
 
   * Implement alarms and thresholds in Elasticsearch Watcher.
 
