@@ -10,7 +10,7 @@
 The following services and OS data are revealed by the Nmap scan results for each machine:
 
 $ nmap -A 192.168.1.0/24
-
+- ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/nmapscan.png)
 
 This scan finds the following services as potential ports of entry:
 - Target 1
