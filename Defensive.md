@@ -82,7 +82,7 @@ CPU Usage Monitor is implemented as follows:
 
 - Each of the alerts listed above is for a distinct vulnerability/exploit. Recall that notifications merely identify harmful conduct and do not prevent it. Suggest a fix for each vulnerability/exploit reported in the warnings above. Implementing a blocklist, for example, is an effective defense against brute-force attacks.
 
-The logs and warnings created during the evaluation indicate that this network is vulnerable to multiple active threats, as shown by the aforementioned alerts. In addition to monitoring for such attacks, the network should be hardened against them. To secure the network, the Blue Team recommends that IT execute the following fixes:
+The logs and alerts created during the evaluation indicate that this network is vulnerable to multiple active threats, as shown by the aforementioned alerts. In addition to monitoring for such attacks, the network should be hardened against them. To secure the network, the Blue Team recommends that IT execute the following fixes:
 - Vulnerability 1: Weak and Easily Brute-Forced Passwords / SSH Login
   - Mitigation Techniques:
     - Set a custom SSH port
