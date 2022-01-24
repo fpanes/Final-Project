@@ -44,6 +44,7 @@ The Red Team was successful in breaching 'Target 1' and obtaining the following 
         - The following command was performed:
         - hydra -l michael -P /usr/share/wordlists/rockyou.txt 192.168.1.110 ssh
         - Password: Michael
+        - ![alt text](https://github.com/fpanesFinal-Project/blob/main/Images/Offensive/bruteforcemike.png)
 
     - Capturing Flag 1: As Michael, I went through directories and files following an SSH Brute Force Attack.
       - Flag1 was discovered in the var/www/html folder at the root in service.html in an HTML remark below the footer.
