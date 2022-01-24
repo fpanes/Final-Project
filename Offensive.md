@@ -51,11 +51,12 @@ The Red Team was successful in breaching 'Target 1' and obtaining the following 
       - Commands:
         - ssh michael@192.168.1.110
         - pw: michael
-
+        - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/sshmikepass.png)
         - cd ../
         - cd /var/www/html
         - ls -l
         - nano service.html
+        - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/flagone.png)
 
   - `flag2.txt`: fc3fd58dcdad9ab23faca6e9a3e581c
     - **Exploit Used**
