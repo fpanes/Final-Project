@@ -37,6 +37,7 @@ The Red Team was successful in breaching 'Target 1' and obtaining the following 
     - **Exploits Used**
       - WPScan is being used to count the number of users on the Target 1 WordPress site.
        - wpscan --url http://192.168.1.110 --enumerate u
+       - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Offensive/wpscan.png)
  
     - Targeting User Michael
       - Executed Hydra Brute Force Attack
