@@ -56,7 +56,7 @@ Excessive HTTP Errors is implemented as follows:
   - **Threshold**: IS ABOVE 400
   - **Vulnerability Mitigated**: Enumeration
   - **Reliability**: The alert is really reliable. When measuring by error codes 400 and higher, any normal or successful replies will be taken out. The 400+ codes indicate more significant client and server issues. Especially when these error codes are being created at such a rapid pace. It came through our wpscan.
-
+ - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Defensive/ExcessHTTPErrors.png)
 
 
 
@@ -66,7 +66,7 @@ HTTP Request Size Monitor is implemented as follows:
   - **Threshold**: IS ABOVE 3500
   - **Vulnerability Mitigated**: Measurement of high-traffic occurrences, which may be a warning of an impending attack.
   - **Reliability**: This was highly reliable when John the Ripper was executed.
-  
+  - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Defensive/HTTPRequestSizeMonitor.png)
 
 
 #### CPU Usage Monitor
@@ -75,7 +75,7 @@ CPU Usage Monitor is implemented as follows:
   - **Threshold**:IS ABOVE 0.5
   - **Vulnerability Mitigated**: John the Ripper
   - **Reliability**: Low and unreliable; the cpu usage monitor triggered even when not attacked.
-  
+  - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Defensive/CPUUsageMon.png)
 
 
 ### Suggestions for Going Further
@@ -96,14 +96,15 @@ The logs and alerts created during the evaluation indicate that this network is 
     - "Texas" 2-Step: Disable Scans and Block User Enumeration via .htcaccess
     - **Why It Works**: This 2 step process will add layers of security by:
     - Adding a code snippet to your theme's functions.php file:
-
+    - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Defensive/WPUserEnumStep2.png)
     - Adding a code snippet to your site's root.htcaccess file (the file must be created if it does not already exist)
+    - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Defensive/WPUserEnumStep1.png)
   
 - Vulnerability 3: Weak wp-config.php security implementation
   - Mitigation Techniques:
   - Adding adequate file security permissions to user files and protecting the wp-config.php file with a.htcaccess file
   - **Why It Works**: Setting up adequate file security permissions may have prevented us from reading the file when we ran the cat/nano command. This left the wp-config.php file with a password listed in plaintext.
-
+  - ![alt text](https://github.com/fpanes/Final-Project/blob/main/Images/Defensive/WPFileSecurityWP-Configphp.png)
   - Modify wp-config.php
   - **Why It Works**: It is safeguarded against accidental access or external attackers by generating a new config file outside of the WWW access directory.
   - Setup the correct file permissions for WP-Config.php to 400
